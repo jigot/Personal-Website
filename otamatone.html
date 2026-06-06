@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Joseph Igot</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+        <!-- Site Header -->
+    <div class="party">
+        <header>
+            <div class="navigation">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="research.html">Research</a>
+                    <a href="teaching.html">Teaching</a>
+                    <a href="mailto:ji32@rice.edu?subject=Website%20Contact">Contact</a>
+                    <a href="otamatone.html" class="active">Otamatone</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Homepage -->
+
+        <section id = "otamatone" >
+            <div id="scene">
+                <div id="tiles"></div>
+                <div class = "spotlight">
+                    <div class="otamatone-dancer">
+                        <img src="pictures/otamatone.png" alt="Otamatone">
+                    </div>   
+                </div>
+                
+                                <!-- Instagram Panel -->
+                <div class="instagram-panel">
+                    <div class="ig-card">
+                        <img src="pictures/instagram-profile.png" alt="Profile" class="ig-avatar">
+                        <h3>@otamataco</h3>
+                        <p>world-class noisemaker 🎶</p>
+                        
+                        <a href="https://www.instagram.com/otamataco/" target="_blank" class="ig-button">
+                            View Profile
+                        </a>
+                    </div>
+                </div>   
+
+                <div class="bragging">
+                    <div class="particle-field bubbles">
+                        <span class="bubble" style="--x:15%; --size:12px; --delay:0s;">♪</span>
+                        <span class="bubble" style="--x:40%; --size:20px; --delay:1s;">♫</span>
+                        <span class="bubble" style="--x:70%; --size:8px;  --delay:2s;">♩</span>
+                        <span class="bubble" style="--x:85%; --size:16px; --delay:0.5s;">♬</span>
+                    </div>
+
+                    <h3>Top 8 Finalist, World's First Otamatone Concerto Competition (2026)</h3>
+                    <p>Judged by Ray Chen, Ariel Lee, and Aristo Sham</p>
+                </div>
+
+                <button id="music-btn">▶ Play Music</button>
+                <audio id="bg-music" loop>
+                    <source src="Bohemian.MP3" type="audio/mpeg">
+                </audio>
+                                                            
+
+                <div class="ground">
+                    <img src="pictures/horizontal_line.png" class="ground-line" alt="">
+                    <img src="pictures/sprout.png" class="ground-sprout" alt="">
+                    <img src="pictures/chicken.png" class="ground-chicken">
+                    <img src="pictures/clover.png" class="ground-clover">
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <!-- Future Sections -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="tiles.js"></script>
+<script>
+const btn = document.getElementById("music-btn");
+const audio = document.getElementById("bg-music");
+
+btn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        btn.textContent = "⏸ Pause Music";
+    } else {
+        audio.pause();
+        btn.textContent = "▶ Play Music";
+    }
+});
+</script>
+<script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>
